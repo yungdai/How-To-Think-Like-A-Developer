@@ -16,7 +16,16 @@ class Rolodex
   def add_contact(contact)
     contact.id = @@index
     @@index += 1
-    @contact << contact
+    @contacts << contact
+  end
+
+  def display_specific_contact(attribute)
+    case attribute
+      when id then 
+    end
+
+
+
   end
 end
 
