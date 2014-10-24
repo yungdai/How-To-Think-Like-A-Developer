@@ -83,18 +83,21 @@ class CRM
     new_value = gets.chomp.to_s
     puts "Are you sure you want to continue (y or n)?"
     selection = gets.chomp.to_s
-    if selection = "y"
+    if selection == "y"
       # @Object.send  (writer, written value into the writer)
       # remember that the writer accessory is formatted as value=.
       # remember that the reader accessory is formatted as value.
       contact_to_modify.send("#{modify_attrib}=", new_value)
-      puts "The contact information is now #{@rolodex.contacts.first_name,} #{@rolodex.contacts.last_name} <#{@rolodex.contacts.email}>, Note: #{@rolodex.contacts.note}"
-    elsif selection = "n"
+      # puts "The contact information is now #{@rolodex.contacts.first_name,
+      # puts "The contact information is as follows: #{contact_to_modify.first_name} #{contact_to_modify.last_name} <#{contact_to_modify.email}>.  With notes: #{contact_to_modify.notes}"
+      #{@rolodex.contacts.last_name} <#{@rolodex.contacts.email}>, Note: #{@rolodex.contacts.note}"
+      display_all_contacts
+    elsif selection == "n"
       puts "Exiting contact modification and returning to the main menu"
       puts ""
       main_menu
     else
-      puts "I don't understand your selection, cancelling function and returning to the main menue"
+      puts "I don't understand your selection, cancelling function and returning to the main menu"
       main_menu
     end
 
@@ -106,7 +109,7 @@ class CRM
 
   def display_all_contacts
     @rolodex.contacts.each do |contact|
-      puts "Contact ID: #{contact.id},  #{contact.first_name} #{contact.last_name} <#{contact.email}>"
+      puts "Contact ID: #{contact.id},  #{contact.first_name} #{contact.last_name} <#{contact.email}>, NOTE: #{contact.note}"
     end
   end
 
@@ -114,7 +117,7 @@ class CRM
     puts "Enter the contact ID you would like to display"
     modify_contact_id = gets.chomp.to_i
     contact_to_modify = @rolodex.display_specific_contact(modify_contact_id)
-    puts contact_to_modify.first_name
+    puts "#{contact_to_modify.first_name} #{contact_to_modify.last_name} <#{contact_to_modify.email}>.  With notes: #{contact_to_modify.notes}"
   end
 
   def display_attrib

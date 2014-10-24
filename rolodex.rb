@@ -23,7 +23,7 @@ class Rolodex
     @contacts.each do |contact|
       if contact.id == attribute
         return contact
-        #puts "The specific contact selected is: #{first_name} #{last_name} < #{email}>"
+        puts "The specific contact selected is: #{first_name} #{last_name} < #{email}>"
       end
     end
   end
