@@ -19,14 +19,18 @@ class Rolodex
     @contacts << contact
   end
 
-  def display_specific_contact(attribute)
+  # def display_specific_contact(attribute)
+  #   @contacts.each do |contact|
+  #     if contact.id == attribute
+  #       return contact
+  #       puts "The specific contact selected is: #{first_name} #{last_name} < #{email}>"
+  #     end
+  #   end
+  # end
+  def display_all
     @contacts.each do |contact|
-      if contact.id == attribute
-        return contact
-        puts "The specific contact selected is: #{first_name} #{last_name} < #{email}>"
-      end
+      puts "Contact ID: #{contact.id},  #{contact.first_name} #{contact.last_name} <#{contact.email}>, NOTE: #{contact.note}"
     end
   end
-
 end
 
