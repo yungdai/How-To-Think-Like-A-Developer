@@ -20,12 +20,13 @@ class Rolodex
   end
 
   def display_specific_contact(attribute)
-    case attribute
-      when id then 
+    @contacts.each do |contact|
+      if contact.id == attribute
+        return contact
+        #puts "The specific contact selected is: #{first_name} #{last_name} < #{email}>"
+      end
     end
-
-
-
   end
+
 end
 

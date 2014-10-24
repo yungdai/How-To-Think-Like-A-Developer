@@ -73,10 +73,34 @@ class CRM
 
   def modify_contact
     display_all_contacts
-    puts "Enter the contact ID you want to modify:"
-    id_selection = gets.chomp.to_i
-    puts "Selected #{@rolodex.contacts.id(id_secelection)}"
-    puts "Do you want to continue?"
+    puts "Enter the contact ID you would like to modify"
+    modify_contact_id = gets.chomp.to_i
+    contact_to_modify = @rolodex.display_specific_contact(modify_contact_id)
+    puts "Selected contact #{contact_to_modify.first_name} #{contact_to_modify.last_name}"
+    puts "Enter the contact attribute you want to modify (first_name, last_name, email, note):"
+    modify_attrib = gets.chomp.to_s
+    puts "What would you like the new value to be?"
+    new_value = gets.chomp.to_s
+    puts "Are you sure you want to continue (y or n)?"
+    selection = gets.chomp.to_s
+    if selection = "y"
+      # @Object.send  (writer, written value into the writer)
+      # remember that the writer accessory is formatted as value=.
+      # remember that the reader accessory is formatted as value.
+      contact_to_modify.send("#{modify_attrib}=", new_value)
+      puts "The contact information is now #{@rolodex.contacts.first_name,} #{@rolodex.contacts.last_name} <#{@rolodex.contacts.email}>, Note: #{@rolodex.contacts.note}"
+    elsif selection = "n"
+      puts "Exiting contact modification and returning to the main menu"
+      puts ""
+      main_menu
+    else
+      puts "I don't understand your selection, cancelling function and returning to the main menue"
+      main_menu
+    end
+
+
+    #puts @rolodex.contacts.inspect # this comamand shows you what is inside the object, uncomment to use this line.
+
   end
 
 
@@ -87,7 +111,10 @@ class CRM
   end
 
   def display_one_contact
-    puts "What is the attribute you want to display?"
+    puts "Enter the contact ID you would like to display"
+    modify_contact_id = gets.chomp.to_i
+    contact_to_modify = @rolodex.display_specific_contact(modify_contact_id)
+    puts contact_to_modify.first_name
   end
 
   def display_attrib
