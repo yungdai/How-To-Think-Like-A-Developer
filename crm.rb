@@ -13,7 +13,6 @@ class CRM
   end
 
   def print_main_menu
-    # puts "\e[H\e[2J"
     puts "[1] Add a contact"
     puts "[2] Modify a contact"
     puts "[3] Display all contacts"
@@ -41,22 +40,23 @@ class CRM
 
   # users gets to choose an option
   def choose_option(option)
-      case option
-        when "1" then add_contact
-        when "2" then modify_contact
-        when "3" then display_all_contacts
-        when "4" then display_one_contact
-        when "5" then display_attrib
-        when "6" then delete_contact
-        when "display all" then display_all_contacts
-          else
-          puts "Invalid Option, Try again"
-          return
-      end
+    case option
+      when "1" then add_contact
+      when "2" then modify_contact
+      when "3" then display_all_contacts
+      when "4" then display_one_contact
+      when "5" then display_attrib
+      when "6" then delete_contact
+      when "display all" then display_all_contacts
+      else
+        puts "Invalid Option, Try again"
+        return
+    end
   end
 
   # methods for the options chosen
-
+  # Adding a contact to the Rolodex.object
+  #
   def add_contact
     print "First Name: "
     first_name = gets.chomp
@@ -119,7 +119,10 @@ class CRM
     puts "Enter the contact ID you would like to display"
     contact_id = gets.chomp.to_i
     contact_to_display = @rolodex.display_specific_contact(contact_id)
-    puts "#{contact_to_display.first_name} #{contact_to_display.last_name} <#{contact_to_display.email}>.  Notes: #{contact_to_display.note}"
+    puts "First Name: #{contact_to_display.first_name}"
+    puts "Last Name: #{contact_to_display.last_name}"
+    puts "Email: #{contact_to_display.email}"
+    puts "Notes: #{contact_to_display.note}"
   end
 
   def display_attrib
