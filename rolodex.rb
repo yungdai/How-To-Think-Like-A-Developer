@@ -19,10 +19,13 @@ class Rolodex
     @contacts << contact
   end
 
-  def display_specific_contact(contact_id)
+  def search_contact(contact_id)
+    # return nil
      @contacts.each do |contact|
        if contact.id == contact_id
          return contact
+       else
+         return nil
        end
      end
   end
@@ -39,5 +42,10 @@ class Rolodex
         return contact
       end
     end
+  end
+
+  def delete_contact(id_delete)
+    # delete the @contacts.Object if the contact ID is == the id_delete parameter
+    @contacts.delete_if{|contact| contact.id == id_delete}
   end
 end

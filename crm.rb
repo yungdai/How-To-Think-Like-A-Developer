@@ -76,7 +76,7 @@ class CRM
     display_all_contacts
     puts "Enter the contact ID you would like to modify"
     modify_contact_id = gets.chomp.to_i
-    contact_to_modify = @rolodex.display_specific_contact(modify_contact_id)
+    contact_to_modify = @rolodex.search_contact(modify_contact_id)
     puts "Selected contact #{contact_to_modify.first_name} #{contact_to_modify.last_name}"
     puts "Enter the contact attribute you want to modify (first_name, last_name, email, note):"
     modify_attrib = gets.chomp.to_s
@@ -100,7 +100,6 @@ class CRM
       main_menu
     end
 
-
     #puts @rolodex.contacts.inspect # this comamand shows you what is inside the object, uncomment to use this line.
 
   end
@@ -111,6 +110,7 @@ class CRM
     #   puts "Contact ID: #{contact.id},  #{contact.first_name} #{contact.last_name} <#{contact.email}>, NOTE: #{contact.note}"
     # end
     @rolodex.display_all
+    puts @rolodex.contacts.inspect # this comamand shows you what is inside the object, uncomment to use this line.
   end
 
 
@@ -118,19 +118,25 @@ class CRM
   def display_one_contact
     puts "Enter the contact ID you would like to display"
     contact_id = gets.chomp.to_i
-    contact_to_display = @rolodex.display_specific_contact(contact_id)
+    contact_to_display = @rolodex.search_contact(contact_id)
+    unless contact_to_display
+      puts "Contact doesn't exist"
+      return
+    end
     puts "First Name: #{contact_to_display.first_name}"
     puts "Last Name: #{contact_to_display.last_name}"
     puts "Email: #{contact_to_display.email}"
     puts "Notes: #{contact_to_display.note}"
   end
 
+  # This method is for looking up a contact by contact ID and then displaying it's attribute.
   def display_attrib
     puts "Enter in the contact ID you would like to see an attribute for:"
     contact_id = gets.chomp.to_i
-    contact_attribute_to_view = @rolodex.display_specific_contact(contact_id)
+    contact_attribute_to_view = @rolodex.search_contact(contact_id)
     puts "Which attribute would you like to see from this contact (first_name, last_name, email, note)?"
     attrib_to_view = gets.chomp.to_s
+    # Object.respond_to? is a way to find to see if the object has an attribute, if found it will respond with true.
     if  contact_attribute_to_view.respond_to?(attrib_to_view)
       puts "The attribute #{attrib_to_view} for #{contact_attribute_to_view.first_name} #{contact_attribute_to_view.last_name}, is #{contact_attribute_to_view.send(attrib_to_view)}"
     else
@@ -151,7 +157,27 @@ class CRM
     puts "[5] User ID"
   end
 
+  # deleting a contact from the CRM
+
+  def delete_contact
+    puts "Type the contact id number you want to delete"
+    id_delete = gets.chomp.to_i
+    puts "Are you sure you wan to delete Contact ID: #{id_delete}? (y or n)"
+    confirm = gets.chomp.to_s
+    if confirm == "y"
+      @rolodex.delete_contact(id_delete)
+      puts "contact #{id_delete} was deleted"
+    elsif confirm == "n"
+      main_menu
+    else
+      puts "That is not a valid choice"
+      main_menu
+    end
+
+
+  end
 end
+
 
 
 crm  = CRM.new("Bitmaker Labs CRM")
