@@ -131,7 +131,13 @@ class CRM
     contact_attribute_to_view = @rolodex.display_specific_contact(contact_id)
     puts "Which attribute would you like to see from this contact (first_name, last_name, email, note)?"
     attrib_to_view = gets.chomp.to_s
-    puts "The attribute #{attrib_to_view} for #{contact_attribute_to_view.first_name} #{contact_attribute_to_view.last_name}, is " # + contact_attribute_to_view."#{attrib_to_view}"
+    if  contact_attribute_to_view.respond_to?(attrib_to_view)
+      puts "The attribute #{attrib_to_view} for #{contact_attribute_to_view.first_name} #{contact_attribute_to_view.last_name}, is #{contact_attribute_to_view.send(attrib_to_view)}"
+    else
+      puts "That is not a valid attribute"
+    end
+
+    # use contact_attribute_to_view.respond_to?(attrib_to_view) to see if attrib_to_view exists as an attribute
   end
 
   # display a menu to select which attribute to sort the contacts by

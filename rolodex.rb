@@ -22,7 +22,6 @@ class Rolodex
   def display_specific_contact(contact_id)
      @contacts.each do |contact|
        if contact.id == contact_id
-         puts "The specific contact selected is: #{contact.first_name} #{contact.last_name} <#{contact.email}>"
          return contact
        end
      end

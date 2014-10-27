@@ -15,7 +15,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/How To Think Like A Developer@crm.coverage" NAME="crm Coverage Results" MODIFIED="1414418594828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="How To Think Like A Developer" />
+    <SUITE FILE_PATH="coverage/How To Think Like A Developer@crm.coverage" NAME="crm Coverage Results" MODIFIED="1414423730426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="How To Think Like A Developer" />
     <SUITE FILE_PATH="coverage/How To Think Like A Developer@contacts.coverage" NAME="contacts Coverage Results" MODIFIED="1414414992146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="How To Think Like A Developer" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -35,8 +35,8 @@
           <file leaf-file-name="crm.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/crm.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="1585" max-vertical-offset="2355">
-                  <caret line="134" column="2" selection-start-line="134" selection-start-column="2" selection-end-line="134" selection-end-column="2" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="1675" max-vertical-offset="2445">
+                  <caret line="140" column="2" selection-start-line="140" selection-start-column="2" selection-end-line="140" selection-end-column="2" />
                   <folding />
                 </state>
               </provider>
@@ -55,8 +55,8 @@
           <file leaf-file-name="rolodex.rb" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/rolodex.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.5827338" vertical-offset="0" max-vertical-offset="780">
-                  <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+                <state vertical-scroll-proportion="0.5194805" vertical-offset="0" max-vertical-offset="750">
+                  <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
                   <folding />
                 </state>
               </provider>
@@ -69,8 +69,8 @@
           <file leaf-file-name="crm.rb" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/crm.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.82733816" vertical-offset="1750" max-vertical-offset="2505">
-                  <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.7619048" vertical-offset="1602" max-vertical-offset="2610">
+                  <caret line="134" column="93" selection-start-line="134" selection-start-column="93" selection-end-line="134" selection-end-column="93" />
                   <folding />
                 </state>
               </provider>
@@ -156,7 +156,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Build-Your-Own Web Server" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
@@ -317,7 +317,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="93" y="23" width="1769" height="1108" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -328,7 +328,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30747128" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30806142" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -480,16 +480,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rolodex.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5827338" vertical-offset="0" max-vertical-offset="780">
-          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.5194805" vertical-offset="0" max-vertical-offset="750">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crm.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82733816" vertical-offset="1750" max-vertical-offset="2505">
-          <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7619048" vertical-offset="1602" max-vertical-offset="2610">
+          <caret line="134" column="93" selection-start-line="134" selection-start-column="93" selection-end-line="134" selection-end-column="93" />
           <folding />
         </state>
       </provider>
