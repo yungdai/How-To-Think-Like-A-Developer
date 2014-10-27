@@ -90,8 +90,6 @@ class CRM
       # remember that the reader accessory is formatted as value.
       contact_to_modify.send("#{modify_attrib}=", new_value)
       # puts "The contact information is now #{@rolodex.contacts.first_name, # uncomment to see the object after it's been modified
-      # *NOT WORKING * puts "The contact information is as follows: #{@rolodex.contacts.first_name} #{@rolodex.contacts.last_name} <#{@rolodex.contacts.email}>.  With notes: #{@rolodex.contacts.notes}"
-      #{@rolodex.contacts.last_name} <#{@rolodex.contacts.email}>, Note: #{@rolodex.contacts.note}"
       display_all_contacts
     elsif selection == "n"
       puts "Exiting contact modification and returning to the main menu"
@@ -115,6 +113,8 @@ class CRM
     @rolodex.display_all
   end
 
+
+  # This method is for getting a user ID and displaying it's contacts.
   def display_one_contact
     puts "Enter the contact ID you would like to display"
     contact_id = gets.chomp.to_i
@@ -126,15 +126,24 @@ class CRM
   end
 
   def display_attrib
-    display_all_contacts
     puts "Enter in the contact ID you would like to see an attribute for:"
-    contact_id = gets.chomp.to_s
+    contact_id = gets.chomp.to_i
+    contact_attribute_to_view = @rolodex.display_specific_contact(contact_id)
     puts "Which attribute would you like to see from this contact (first_name, last_name, email, note)?"
-    attrib_view = gets.chomp.to_s
-
-    @rolodex.contacts.contact_id
+    attrib_to_view = gets.chomp.to_s
+    puts "The attribute #{attrib_to_view} for #{contact_attribute_to_view.first_name} #{contact_attribute_to_view.last_name}, is " # + contact_attribute_to_view."#{attrib_to_view}"
   end
 
+  # display a menu to select which attribute to sort the contacts by
+  def display_by_attr_menu
+    puts "\e[H\e[2J"
+    puts "Sort contacts by:"
+    puts "[1] First Name"
+    puts "[2] Last Name"
+    puts "[3] Email"
+    puts "[4] Note"
+    puts "[5] User ID"
+  end
 
 end
 
